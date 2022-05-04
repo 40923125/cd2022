@@ -176,16 +176,18 @@ vertical: body pane on the botton</t>
         &lt;img src="https://static.slid.es/reveal/logo-v1/reveal-white-text.svg" alt="reveal.js logo" style="height: 180px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo"&gt;
     &lt;/a&gt;
     &lt;h3&gt;about&lt;/h3&gt;
-&lt;p&gt;
-課程倉儲: &lt;a href="https://github.com/40923125/cd2022"&gt;https://github.com/40923125/cd2022 &lt;/a&gt;
+    &lt;p&gt;
+            &lt;small&gt;
+            課程倉儲: &lt;a href="https://github.com/40923125/cd2022"&gt;https://github.com/40923125/cd2022 &lt;/a&gt;
 
-內容管理: &lt;a href="https://40923125.github.io/cd2022"&gt;https://40923125.github.io/cd2022 &lt;/a&gt;
+            內容管理: &lt;a href="https://40923125.github.io/cd2022"&gt;https://40923125.github.io/cd2022 &lt;/a&gt;
 
-課程投影片: &lt;a href="https://40923125.github.io/cd2022/reveal"&gt;https://40923125.github.io/cd2022/reveal &lt;/a&gt;
+            課程投影片: &lt;a href="https://40923125.github.io/cd2022/reveal"&gt;https://40923125.github.io/cd2022/reveal &lt;/a&gt;
 
-課程網誌: &lt;a href="https://40923125.github.io/cd2022/blog"&gt;https://40923125.github.io/cd2022/blog &lt;/a&gt;
+            課程網誌: &lt;a href="https://40923125.github.io/cd2022/blog"&gt;https://40923125.github.io/cd2022/blog &lt;/a&gt;
 
-0123456789
+            0123456789
+            &lt;/small&gt;
 &lt;/p&gt;
 &lt;/section&gt;
 
