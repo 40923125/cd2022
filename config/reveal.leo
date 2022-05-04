@@ -109,11 +109,13 @@ QLineEdit#editorLabel {
 vertical: body pane on the botton</t>
 <t tx="leo.20200818165234.1">@language xml
 @tabwidth -4
-@others</t>
+@others
+</t>
 <t tx="leo.20200818165301.1">&lt;!doctype html&gt;
 &lt;html lang="en"&gt;
 @others
-&lt;/html&gt;</t>
+&lt;/html&gt;
+</t>
 <t tx="leo.20200818165413.1">&lt;body&gt;
 @others
     &lt;script src="dist/reveal.js"&gt;&lt;/script&gt;
@@ -137,7 +139,8 @@ vertical: body pane on the botton</t>
         });
 
     &lt;/script&gt;
-&lt;/body&gt;</t>
+&lt;/body&gt;
+</t>
 <t tx="leo.20200818165438.1">&lt;head&gt;
     &lt;meta charset="utf-8"&gt;
 
@@ -157,14 +160,17 @@ vertical: body pane on the botton</t>
 
     &lt;!-- Theme used for syntax highlighting of code --&gt;
     &lt;link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme"&gt;
-&lt;/head&gt;</t>
+&lt;/head&gt;
+</t>
 <t tx="leo.20200818170041.1">&lt;div class="reveal"&gt;
     @others
-&lt;/div&gt;</t>
+&lt;/div&gt;
+</t>
 <t tx="leo.20200818170222.1">&lt;!-- Any section element inside of this container is displayed as a slide --&gt;
 &lt;div class="slides"&gt;
     @others
-&lt;/div&gt;</t>
+&lt;/div&gt;
+</t>
 <t tx="leo.20200818170328.1">&lt;section&gt;
     &lt;a href="https://revealjs.com"&gt;
         &lt;img src="https://static.slid.es/reveal/logo-v1/reveal-white-text.svg" alt="reveal.js logo" style="height: 180px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo"&gt;
