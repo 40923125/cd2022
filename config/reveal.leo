@@ -169,7 +169,7 @@ vertical: body pane on the botton</t>
     &lt;a href="https://revealjs.com"&gt;
         &lt;img src="https://static.slid.es/reveal/logo-v1/reveal-white-text.svg" alt="reveal.js logo" style="height: 180px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo"&gt;
     &lt;/a&gt;
-    &lt;h3&gt;about&lt;/h3&gt;
+    &lt;h2&gt;about&lt;/h2&gt;
 課程倉儲: &lt;a href="https://github.com/40923125/cd2022"&gt;https://github.com/40923125/cd2022 &lt;/a&gt;
 
 內容管理: &lt;a href="https://40923125.github.io/cd2022"&gt;https://40923125.github.io/cd2022 &lt;/a&gt;
