@@ -57,8 +57,8 @@
 <v t="leo.20200818195604.1"><vh>slide 24</vh></v>
 <v t="leo.20200818195625.1"><vh>slide 25</vh></v>
 <v t="leo.20200818195643.1"><vh>slide 26</vh></v>
-<v t="leo.20200818195701.1"><vh>slide 27</vh></v>
 <v t="leo.20200818195715.1"><vh>slide 28</vh></v>
+<v t="leo.20200818195701.1"><vh>slide 27</vh></v>
 <v t="leo.20200818195731.1"><vh>slide 29</vh></v>
 <v t="leo.20200818195748.1"><vh>slide 30</vh></v>
 <v t="leo.20200818195800.1"><vh>slide 31</vh></v>
@@ -212,7 +212,7 @@ vertical: body pane on the botton</t>
         &lt;img src="https://static.slid.es/reveal/logo-v1/reveal-white-text.svg" alt="reveal.js logo" style="height: 180px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo"&gt;
     &lt;/a&gt;
     &lt;h3&gt;The HTML Presentation Framework&lt;/h3&gt;
-    &lt;p&gt;
+    &lt;p&gt;001
         &lt;small&gt;Created by &lt;a href="http://hakim.se"&gt;Hakim El Hattab&lt;/a&gt; and &lt;a href="https://github.com/hakimel/reveal.js/graphs/contributors"&gt;contributors&lt;/a&gt;&lt;/small&gt;
     &lt;/p&gt;
 &lt;/section&gt;
