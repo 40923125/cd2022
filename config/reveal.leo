@@ -173,6 +173,7 @@ vertical: body pane on the botton</t>
     &lt;p&gt;001
         &lt;small&gt;Created by &lt;a href="http://hakim.se"&gt;Hakim El Hattab&lt;/a&gt; and &lt;a href="https://github.com/hakimel/reveal.js/graphs/contributors"&gt;contributors&lt;/a&gt;&lt;/small&gt;
     &lt;/p&gt;
+&lt;p&gt;0123456789&lt;/p&gt;
 &lt;/section&gt;
 
 </t>
