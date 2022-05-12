@@ -374,7 +374,7 @@ var winkVideoData_uarm_m13 = {
 <p></p>
 <p>零件.組合下載</p>
 <p><a href="https://drive.google.com/drive/folders/1OGLo98alZ8DD6xwSKtb2N1LZq6GTCLmJ?usp=sharing">uarm(NX)</a></p>
-<h1>w3video</h1>
+<h1>w3_NXvideo</h1>
 <h4>video13</h4>
 <p>參考工程圖利用NX繪製</p>
 <p>工程圖:</p>
@@ -522,4 +522,39 @@ var winkVideoData4 = {
 </div>
 <div class="winkVideoPlayOverlayClass"></div>
 </div>
-<p>0</p>
+<h1>w12</h1>
+<h2>NXOpen Python</h2>
+<h4>於NX內建立繪製群組</h4>
+<script>
+var w12_task = {
+  dataVersion: 1,
+  frameRate: 10,
+  buttonFrameLength: 5,
+  buttonFrameOffset: 2,
+  frameStops: {
+  },
+};
+</script>
+<!-- 接下來將 mp4 檔案從 downloads 目錄取出 -->
+<div class="winkVideoContainerClass"><video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="/static" data-varname="w12_task" height="630" muted="true" width="1008">
+<source src="/downloads/w12_task.mp4" type="video/mp4"/></video></div>
+<div class="winkVideoContainerClass"></div>
+<script></script>
+<h4>於NX內導入外掛程式執行</h4>
+<script>
+var w12_task2 = {
+  dataVersion: 1,
+  frameRate: 10,
+  buttonFrameLength: 5,
+  buttonFrameOffset: 2,
+  frameStops: {
+  },
+};
+</script>
+<!-- 接下來將 mp4 檔案從 downloads 目錄取出 -->
+<div class="winkVideoContainerClass"><video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="/static" data-varname="w12_task2" height="630" muted="true" width="1008">
+<source src="/downloads/w12_task2.mp4" type="video/mp4"/></video></div>
+<div class="winkVideoContainerClass"></div>
+<script></script>
+<p>心得:</p>
+<p>當你完全了解NX這套軟體時,會發現其內部有許多可以自定義的功能,可以將編寫完成的繪製程式碼導入NX,使其執行,可免除重複零件之繪製時間。也可以透過程式碼來控制多個零件尺寸,減少所需繪製的時間。</p>
