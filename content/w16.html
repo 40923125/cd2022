@@ -2,7 +2,7 @@
         <head>
         <title>40923125 cd2022</title>
         <meta charset="utf-8">
-<meta property="head" content="H2">
+<meta property="head" content="H1">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
@@ -139,118 +139,25 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">小組連結 << <a href='小組連結.html'>Previous</a> <a href='結果.html'>Next</a> >> 結果<br /><h1>建立方式</h1>
-<p>利用<a href="https://mde.tw/cd2022_guide/content/run.html">run</a>跑<a href="https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/c7043ac81005b069c58080c1222fe30048d588cb/grp_2022.py">grp_2022.py</a>,但需要更改取樣為<a href="https://mde.tw/studlist/2022spring/2a.txt">2a.txt</a>,並且調整小組之固定變數B改A</p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import html
-from browser import document
-import random
-
-brython_div = document["brython_div"]
-
-# 根據 href 與 content 將 html 元件中的 anchor 插入頁面
-def makeLink(href, content):
-    brython_div &lt;= html.A(content, href=href)
-    #brython_div &lt;= html.BR()
-
-aorb = "a"
-url = "https://mde.tw/studlist/2022spring/2a.txt"
-course = "cd2022"
-# 從 url 讀取資料後, 以跳行符號分割資料進入數列後
-# 去除數列中的第一筆與最後一筆資料後可得每位學員所填的資料
-data = open(url).read().split("\n")[1:-1]
-#print(data)
-# 再以 \t 分割每位學員的資料, 
-#可以取得每位學員的學號, github 帳號與組別
-big = []
-num_github = {}
-for i in data:
-    stud_no, github, grp_no = i.split("\t")
-    #print(stud_no, github, grp_no)
-    big.append([stud_no, github, grp_no])
-    if github != "":
-        num_github[stud_no] = github
-    else:
-        num_github[stud_no] = stud_no
-#print(big)
-# 根據每一 element 的第三個 element sort
-big.sort(key = lambda x: x[2])
-# big 已經按照組別排序
-#print(big)
-ungrouped = []
-grouped = []
-for i in big:
-    if i[2] == "":
-        ungrouped.append(i[0])
-    else:
-        # 將組別放到第一位置
-        grouped.append([i[2], i[0]])
-#print(grouped)
-#print(ungrouped)
-d = {}
-# 逐一檢視 grouped 數列
-for i in grouped:
-    # 若該組序已存在 d dict 中,
-    # 則以 extend() 納入除組序之外的組員學號
-    if i[0] in d:
-        d[i[0]].extend(i[1:])
-        #print("i[0] in d:",i[0], "d:", d)
-    else:
-        # 若已納分組的 element 中之組序為全新組序,
-        # 則將該已納分組的 element 放入 dict 首位元素
-        # 準備透過 extend() 納入其他組員學號
-        d[i[0]] = i
-        #print("i i[0] not in d:", i, "d:", d)
-#print("finally d:", d, "d.values():", d.values())
-group_member = list(d.values())
-# group_member 第一位為組序, 隨後為組員學號
-#print(group_member)
-random.shuffle(ungrouped)
-#print("ungrouped:" + str(len(ungrouped)))
-grp = 1
-group = []
-for i in group_member:
-    #print("grp " + str(i[0]) + ": num, " + str(len(i[1:])))
-    if len(i[1:]) &lt; 8:
-        #print("can take " + str(8 - len(i[1:])) + "members")
-        # 若仍有學員未納組, 則可根據缺額補入學員學號
-        try:
-            #print("add " + str(ungrouped[:8-len(i[1:])]))
-            i.extend(list(ungrouped[:8-len(i[1:])]))
-            # 拿掉已經分配組別的學員學號
-            ungrouped = ungrouped[8-len(i[1:]):]
-        except:
-            #print("no member to add!")
-            pass
-    else:
-        #print("full")
-        pass
-    # 根據增量決定組序
-    i[0] = str(grp)
-    group.append(i)
-    grp += 1
-#print(group)
-for i in group:
-    brython_div &lt;= "第" + str(i[0]) + "組:" + html.BR()
-    grp_repo = course + aorb + "g" + str(i[0])
-    for num in i[1:]:
-        # num 為各組組員學號
-        #print(num)
-        studhref = "https://"+ str(num_github[num]) + ".github.io/" + course
-        repohref = "https://github.com/"+ str(num_github[num]) +"/"+course
-        grphref = "https://"+ str(num_github[num]) + ".github.io/" + grp_repo
-        grp_repohref = "https://github.com/"+ str(num_github[num]) +"/" + grp_repo       
-        brython_div &lt;= "repo: "
-        makeLink(repohref, str(num))
-        brython_div &lt;= " www: "
-        makeLink(studhref, str(num))
-        brython_div &lt;= " " + grp_repo + "-repo: "
-        makeLink(grp_repohref, str(num))
-        brython_div &lt;= " " + grp_repo + "-www: "
-        makeLink(grphref, str(num))
-        brython_div &lt;= html.BR()
-print("done")</pre>
-<p></p>
-<br />小組連結 << <a href='小組連結.html'>Previous</a> <a href='結果.html'>Next</a> >> 結果</div>
+    <div id="tipue_search_content">w14 << <a href='w14.html'>Previous</a> <br /><h1>w16</h1>
+<p>    於<a href="https://mde.tw/cd2022_guide/content/w16.html">課程網頁w16</a>下載<a href="https://mde.tw/cd2022_guide/downloads/w15_uarm_tkinter_control.7z">w15_uarm_tkinter_control.7z</a>、<a href="https://mde.tw/cd2022_guide/downloads/w15_rotating_cuboid.7z">w15_rotating_cuboid.7z</a>、<a href="https://mde.tw/cd2022_guide/downloads/rotating_cuboid_flask.7z">rotating_cuboid_flask.7z</a>三個壓縮檔並解壓縮。</p>
+<p>1.遠端控制uarm</p>
+<p>   (1)用coppeliaSim開啟tkinter_control內的uarm_nx_tkinter_gui_control.ttt或</p>
+<p>        uarm_nx_tkinter_gui_control_exhaustive.simscene.xml並開始模擬</p>
+<p>   (2)利用SciTE開啟uarm_tkinter_control.py並執行會跳出下圖視窗</p>
+<p>       <img caption="false" height="198" src="./../images/uarm_co.png" width="400"/></p>
+<p><span>   (3)點擊To connect後將連結coppeliaSim模擬uarm的控制面板,使其可利用此程式進行</span></p>
+<p><span>       遠端操作。</span></p>
+<p><span></span>       <iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/u3qdW_f9EA8" width="560"></iframe></p>
+<p><span>3.遠端觀看</span><span>cuboid模擬</span></p>
+<p>如先前有操作<span>遠端控制uarm,因使用相同伺服器,需先結束伺服器的使用,才能操作。</span></p>
+<p>    (1)<span>用coppeliaSim開啟</span>rotating_cuboid內的rotating_cuboid.ttt</p>
+<p>    (2)<span>利用SciTE開啟rotating_cuboid.py並執行會跳出兩個視窗,可由攝影機視角觀看物件</span></p>
+<p><span>        模擬</span></p>
+<p>        <img alt="" height="270" src="./../images/近端不啟動cop模擬.png" width="500"/></p>
+<p>        如要觀看網頁版則<span>利用SciTE開啟rotating_cuboid.py執行,將會於</span></p>
+<p><span>         <a href="http://127.0.0.1:5000">http://127.0.0.1:5000</a>顯示攝影機視角之畫面,可點擊左下連結切換攝影機</span></p>
+<p><span></span>         <img caption="false" height="398" src="./../images/網頁方塊.png" width="500"/></p><br />w14 << <a href='w14.html'>Previous</a> </div>
         
     <!-- footer -->
       <div class="container">
