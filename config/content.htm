@@ -608,4 +608,20 @@ var winkVideoData_w14 = {
 <p>        如要觀看網頁版則<span>利用SciTE開啟rotating_cuboid.py執行,將會於</span></p>
 <p><span>         <a href="http://127.0.0.1:5000">http://127.0.0.1:5000</a>顯示攝影機視角之畫面,可點擊左下連結切換攝影機</span></p>
 <p><span></span>         <img caption="false" height="398" src="/images/網頁方塊.png" width="500"/></p>
-<p></p>
+<h2>Online_Exam</h2>
+<p>左側綠色基座uarm:</p>
+<p><span>joint1:</span>L順時針2度;K<span>逆時針2度</span></p>
+<p><span>joint2</span>:J<span>順時針1度;</span>H<span>逆時針1度</span></p>
+<p><span>joint3:</span>G<span>順時針1度;</span>F<span>逆時針1度</span></p>
+<p>右側桃色基座uarm:</p>
+<p><span>joint1:I</span>順時針2度;U<span>逆時針2度</span></p>
+<p><span>joint2</span>:Y<span>順時針1度;T</span><span>逆時針1度</span></p>
+<p><span>joint3:R</span><span>順時針1度;E</span><span>逆時針1度</span></p>
+<p><span></span></p>
+<p><img alt="" height="429" src="/images/uef.png" width="700"/></p>
+<p>Q1:已知左側綠色底座的 uArm 機械手臂, 其基座座標原點位於絕對座標 (1.0, 0.25, 0), 啟動模擬後 green_suctionpad_frame 座標原點則位於 (0.22859, 0.26047, 0.36576), 請列出運算式說明, 啟動模擬後 joint1, joint2 與 joint3 分別以逆時針旋轉 5 度後, 求 green_suctionpad_frame 的絕對座標值。</p>
+<p>A1:(0.2663,0.1959,0.3891)但因數值震盪,誤差值0.005</p>
+<p><img alt="" height="398" src="/images/q1.png" width="500"/></p>
+<p>Q2:已知左側 uarm 前方的紅色方塊頂端中心座標值為 (0.2, 0.4, 0.1), 請列出運算式說明左側 uarm 機械手臂的 joint1, joint2 與 joint3 該如何旋轉才能讓 end effector 的吸盤末端中心點移動至紅色方塊頂端中心?</p>
+<p>A2:左側綠色基座uarm <span>joint1 joint2 joint3每按下一次快捷鍵(L,K,J,H,G,F)會旋轉一度,按下 L 5次; J 32次; G 35次即可到達紅色方塊中心,</span>故需<span>joint1順時針旋轉10度;joint2</span><span>順時針旋轉32度;joint3<span>順時針旋轉35度</span></span></p>
+<p><img alt="" height="465" src="/images/u3.png" width="500"/></p>
