@@ -598,7 +598,8 @@ var winkVideoData_w14 = {
 <p>       <img caption="false" height="198" src="/images/uarm_co.png" width="400"/></p>
 <p><span>   (3)點擊To connect後將連結coppeliaSim模擬uarm的控制面板,使其可利用此程式進行</span></p>
 <p><span>       遠端操作。</span></p>
-<p><span></span>       <iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/u3qdW_f9EA8" width="560"></iframe></p><h2>rotating_cuboid</h2>
+<p><span></span>       <iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/u3qdW_f9EA8" width="560"></iframe></p>
+<h2>rotating_cuboid</h2>
 <p><span>遠端觀看</span><span>cuboid模擬</span></p>
 <p>如先前有操作<span>遠端控制uarm,因使用相同伺服器,需先結束伺服器的使用,才能操作。</span></p>
 <p>    (1)<span>用coppeliaSim開啟</span>rotating_cuboid內的rotating_cuboid.ttt</p>
@@ -609,10 +610,21 @@ var winkVideoData_w14 = {
 <p><span>         <a href="http://127.0.0.1:5000">http://127.0.0.1:5000</a>顯示攝影機視角之畫面,可點擊左下連結切換攝影機</span></p>
 <p><span></span>         <img caption="false" height="398" src="/images/網頁方塊.png" width="500"/></p>
 <h2>Online_Exam</h2>
+<p>左側綠色基座uarm:</p>
+<p><span>joint1:</span>L順時針2度;K<span>逆時針2度</span></p>
+<p><span>joint2</span>:J<span>順時針1度;</span>H<span>逆時針1度</span></p>
+<p><span>joint3:</span>G<span>順時針1度;</span>F<span>逆時針1度</span></p>
+<p>右側桃色基座uarm:</p>
+<p><span>joint1:I</span>順時針2度;U<span>逆時針2度</span></p>
+<p><span>joint2</span>:Y<span>順時針1度;T</span><span>逆時針1度</span></p>
+<p><span>joint3:R</span><span>順時針1度;E</span><span>逆時針1度</span></p>
+<p><span></span></p>
 <p><img alt="" height="429" src="/images/uef.png" width="700"/></p>
 <p>Q1:已知左側綠色底座的 uArm 機械手臂, 其基座座標原點位於絕對座標 (1.0, 0.25, 0), 啟動模擬後 green_suctionpad_frame 座標原點則位於 (0.22859, 0.26047, 0.36576), 請列出運算式說明, 啟動模擬後 joint1, joint2 與 joint3 分別以逆時針旋轉 5 度後, 求 green_suctionpad_frame 的絕對座標值。</p>
-<p>A1:(0.2714,0.1317,0.3917)但因數值震盪,誤差值0.01</p>
+<p>A1:(0.2663,0.1959,0.3891)但因數值震盪,誤差值0.005</p>
 <p><img alt="" height="398" src="/images/q1.png" width="500"/></p>
 <p>Q2:已知左側 uarm 前方的紅色方塊頂端中心座標值為 (0.2, 0.4, 0.1), 請列出運算式說明左側 uarm 機械手臂的 joint1, joint2 與 joint3 該如何旋轉才能讓 end effector 的吸盤末端中心點移動至紅色方塊頂端中心?</p>
-<p>A2:左側綠色基座uarm <span>joint1 joint2 joint3每按下一次快捷鍵(L,K,J,H,G,F)會旋轉一度,按下 L 5次; J 32次; G 35次即可到達紅色方塊中心,</span>故需<span>joint1順時針旋轉5度;joint2</span><span>順時針旋轉32度;joint3<span>順時針旋轉35度</span></span></p>
+<p>A2:左側綠色基座uarm <span>joint1 joint2 joint3每按下一次快捷鍵(L,K,J,H,G,F)會旋轉一度,按下 L 5次; J 32次; G 35次即可到達紅色方塊中心,</span>故需<span>joint1順時針旋轉10度;joint2</span><span>順時針旋轉32度;joint3<span>順時針旋轉35度</span></span></p>
 <p><img alt="" height="465" src="/images/u3.png" width="500"/></p>
+<h1>期末考週</h1>
+<p>我是使用NX12繪製反向uarm的,繪製期間發現組合約束時會因選取順序產生不一樣的結果,我在無法連接的約束以此方式可以解決,整個流程我覺得組呵的部分最複雜,因為我組合時是憑感覺的,我也不知道要怎麼以影片呈現,所以只有製作<span>修改 "nx12絞鍊"與 "front joint" 零件的部分。</span></p>
