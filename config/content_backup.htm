@@ -627,4 +627,28 @@ var winkVideoData_w14 = {
 <p>A2:左側綠色基座uarm <span>joint1 joint2 joint3每按下一次快捷鍵(L,K,J,H,G,F)會旋轉一度,按下 L 5次; J 32次; G 35次即可到達紅色方塊中心,</span>故需<span>joint1順時針旋轉10度;joint2</span><span>順時針旋轉32度;joint3<span>順時針旋轉35度</span></span></p>
 <p><img alt="" height="465" src="/images/u3.png" width="500"/></p>
 <h1>期末考週</h1>
+<h4>1.反向 uarm 繪製</h4>
 <p>我是使用NX12繪製反向uarm的,繪製期間發現組合約束時會因選取順序產生不一樣的結果,我在無法連接的約束以此方式可以解決,整個流程我覺得組呵的部分最複雜,因為我組合時是憑感覺的,我也不知道要怎麼以影片呈現,所以只有製作<span>修改 "nx12絞鍊"與 "front joint" 零件的部分。</span></p>
+<script>
+var winkVideoData_w18 = {
+  dataVersion: 1,
+  frameRate: 10,
+  buttonFrameLength: 5,
+  buttonFrameOffset: 2,
+  frameStops: {
+  },
+};
+</script>
+<!-- 接下來將 mp4 檔案從 downloads 目錄取出 -->
+<div class="winkVideoContainerClass"><video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="/static" data-varname="winkVideoData_w18" height="630" muted="true" width="1008"><source src="/downloads/uarm.mp4" type="video/mp4"/></video></div>
+<h4>3.反向 uarm 三軸作動(小組討論)</h4>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/KQNJMNWeB1I" width="560"></iframe></p>
+<p>心得:</p>
+<p><span>UI slider控制是使用上課時所講解的程式去做變化,採用NX12匯出的STL檔來進行CoppeliaSim 4.3.0 rev3模擬,因為我模擬時有問題,因此有詢問小組組員,藉由小組討論得出了最好的模擬結果,達到偕同的目的。</span></p>
+<h4>4.反向 uarm 吸起方塊</h4>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/8X5_UdQV2iw" width="560"></iframe></p>
+<p>心得:</p>
+<p>一開始還不知道吸盤要怎麼接上去,後來觀看學長的影片得知可以利用joint定位,而吸盤自帶吸起功能,只要開啟碰撞就可吸起方塊,用模擬的方式來完成實體的模擬雖然不會有成本問題,但很耗時間。</p>
+<h4>5.反向 uarm <span>跨網路 Python remote API 控制</span></h4>
+<p><span><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/i4JF0Jgyzoc" width="560"></iframe>心得:</span></p>
+<p><span>我們使用hamachi這套軟體建立內部網路,並利用其網路來遠端控制反向uarm,使用時覺得這種實作很有新鮮感,利用網路進入他人的電腦並操控,像個駭客。</span></p>
